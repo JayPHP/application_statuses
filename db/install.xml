@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="blocks/application_statuses/db" VERSION="20160630" COMMENT="XMLDB file for Moodle blocks/application_statuses"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="block_application_statuses" COMMENT="Table for Applications. Contains the application id, the userid of the applicant, the title of the prospect applied for, the date that the application was submitted and the current status of the application.">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="11" NOTNULL="true" SEQUENCE="false" COMMENT="The user ID of the applicant"/>
+        <FIELD NAME="prospect_title" TYPE="char" LENGTH="250" NOTNULL="true" SEQUENCE="false" COMMENT="The title of the prospect for which the applicant has applied for"/>
+        <FIELD NAME="link" TYPE="char" LENGTH="500" NOTNULL="false" SEQUENCE="false" COMMENT="The optional link to a page referencing the application"/>
+        <FIELD NAME="date" TYPE="DATETIME" NOTNULL="true" SEQUENCE="false" COMMENT="The date in which the application was submitted"/>
+        <FIELD NAME="status" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false" COMMENT="The current status of the application"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
