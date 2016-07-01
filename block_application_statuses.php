@@ -41,7 +41,7 @@ class block_application_statuses extends block_list
      * @return null
      */
     private function getApplications()
-    { 
+    {
         global $DB, $USER;
 
         if ($applications = $DB->get_records('block_application_statuses', ['userid' => $USER->id])) {
