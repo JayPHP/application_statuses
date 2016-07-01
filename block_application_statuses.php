@@ -9,10 +9,10 @@
 
 class block_application_statuses extends block_list 
 {
-    public function init() 
-    {
-        $this->title = get_string('pluginname', 'block_application_statuses');
-    }
+	public function init() 
+	{
+	    $this->title = get_string('pluginname', 'block_application_statuses');
+	}
 
 	public function specialization() 
 	{
@@ -31,8 +31,8 @@ class block_application_statuses extends block_list
 
 	    $this->content = new stdClass;
 	    $this->getApplications();
- 
-    	return $this->content;
+
+		return $this->content;
 	}
 
 	/**
@@ -57,4 +57,4 @@ class block_application_statuses extends block_list
 			}
 		}
 	}
-}
+	}
